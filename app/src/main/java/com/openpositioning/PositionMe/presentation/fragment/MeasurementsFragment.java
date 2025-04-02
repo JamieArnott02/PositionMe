@@ -95,7 +95,7 @@ public class MeasurementsFragment extends Fragment {
         sensorFusion = SensorFusion.getInstance();
         prefaces = new int[]{R.string.x, R.string.y, R.string.z};
         gnssPrefaces = new int[]{R.string.lati, R.string.longi};
-
+        //Code By Guilherme Evaluate battery performance
         this.refreshDataHandler = new Handler();
         batteryManager = (BatteryManager) requireContext().getSystemService(Context.BATTERY_SERVICE);
     }
@@ -220,7 +220,7 @@ public class MeasurementsFragment extends Fragment {
                 wifiListView.setAdapter(new WifiListAdapter(getActivity(), wifiObjects));
             }
 
-            //Code By Guilherme Evaluate battery performance
+            //Code By Guilherme Check the current battery status of the device
             android.os.BatteryManager bm = (android.os.BatteryManager)
                     requireContext().getSystemService(android.content.Context.BATTERY_SERVICE);
 
